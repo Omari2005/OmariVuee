@@ -2,7 +2,7 @@
 import ProductsList from './components/ProductList.vue'
 import Cart from './components/Cart.vue'
 import Product from './components/Product.vue'
-const pageTitle = "State Problem"
+const pageTitle = "Watchlist"
 </script>
 
 <template>

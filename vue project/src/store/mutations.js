@@ -8,5 +8,5 @@ export default {
         let item = state.cart.find(product => product.id === +itemId)
         state.products.push(item)
         state.cart.splice(state.cart.indexOf(item), 1)
+    },
     }
-}
