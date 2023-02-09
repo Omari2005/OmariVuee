@@ -1,5 +1,6 @@
 export default function state() {
     return {
+        search: "",
         products: [
             { id: 1, name: 'Crypto',
              url:'https://www.youtube.com/watch?v=ToSbBwzzMj0',

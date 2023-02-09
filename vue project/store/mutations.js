@@ -9,4 +9,7 @@ export default {
         state.products.push(item)
         state.cart.splice(state.cart.indexOf(item), 1)
     },
+    ChangeSearch(state, srch){
+        state.search = srch;
+    },
     }
