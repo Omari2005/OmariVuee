@@ -1,32 +1,32 @@
 <script>
 import useProducts from '../composables/useProducts'
-import ListItemComponent from '../ListItemComponent.vue'
+import ProductList from '../ProductList.vue'
 export default {
-    setup(props, context){
-        const { products } = useProducts()
+    setup(props, context) {
+        const { products } = useProducts();
         function changeDoneStatus(item) {
-            context.emit('onChangeDoneStatus', item)
+            context.emit("onChangeDoneStatus", item);
         }
         function deleteRecord(item) {
-            context.emit('onDelete', item)
+            context.emit("onDelete", item);
         }
-        function showProductDetails(){
-            context.emit('onShowProductDetails', id)
+        function showProductDetails() {
+            context.emit("onShowProductDetails", id);
         }
         return {
             products,
             changeDoneStatus,
             deleteRecord,
             showProductDetails
-        }
-        
-    }
+        };
+    },
+    components: { ProductList }
 }
 </script>
 
 <template>
     <ul>
-        <ListItemComponent v-for="item in products" :key="item.index" :itemData="item" :renderCheckbox="changeStatus"
+        <ProductList v-for="item in products" :key="item.index" :itemData="item" :renderCheckbox="changeDoneStatus"
             :renderDeleteBtn="canDelete" @onChange="changeDoneStatus($event)" @onDelete="deleteRecord($event)" @onShow="showProductDetails" />
     </ul>
 </template>

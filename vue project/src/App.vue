@@ -1,17 +1,12 @@
 <script setup>
-import ProductsList from './components/ProductList.vue'
-import Cart from './components/Cart.vue'
-import Product from './components/Product.vue'
-const pageTitle = "Watchlist"
+import NavBar from './components/Menu/NavBAR.vue'
 </script>
 
 <template>
-  <div class="container mx-auto text-center">
-    <h1 class="text-3xl font-bold pt-4">{{ pageTitle }}</h1>
-    <div class="flex flex-row space-x-4">
-      <ProductsList />
-      <Cart />
-      <Product />
-    </div>
+
+<div class="static active">
+
+<NavBar />
+<router-view />
   </div>
 </template>
